@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main(){
+    //power of 4 on a digit, step by step
+    int b;//base value
+    int x=4;//power value
+    printf("enter base value : \n");
+    scanf("%d", &b);
+    int quat; //final placeholder
+    int temp; //temporary placeholder
+    temp=b*b;
+    temp=b*temp;
+    quat=temp*b;
+    printf("%d to the power of 4 is equal to : %d \n", b, quat);
+    return 0;
+
+}
