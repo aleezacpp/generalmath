@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    int b;//base value
+    int x;//power value
+    int s=0;
+    printf("enter b : \n");
+    scanf("%d", &b);
+    printf("enter x : \n");
+    scanf("%d", &x);
+        s=b+s; //sstores b value temporarily
+    for (int i=1;i<x;i++){
+        b=s*b;
+    }
+    printf("%d raised to the power of %d is equal to: %d", s, x, b);
+    return 0;
+    
+}
