@@ -1,0 +1,11 @@
+#include <stdio.h>
+int main(){
+    int b=2; //base value
+    int temp;//to store temporarily
+    int x=3; //power value
+    int cube;
+    temp=b*b;
+    cube=b*temp;
+    printf("cube of 2 is equal to %d", cube);
+    return 0;
+}
