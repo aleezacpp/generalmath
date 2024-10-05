@@ -5,11 +5,19 @@ int b; //second term
 int d; //difference
 int n; //nth term
 int ntht; //term output
+int x; //number of first ____ terms user wants to add
+float sum; //sum of x terms
 void nthterm(int n){
 printf("enter n : \n"); //the count of term user wants to output
 scanf("%d", &n);
 ntht=(a+(n-1)*d);
 printf("nth term : %d \n", ntht);
+}
+void sumofxterms(int x){
+    printf("enter the number of first x terms you want to add : \n");
+    scanf("%d", &x);
+    sum=((x)*0.5)*((2*a)+(x-1)*d);
+    printf("sum of %d terms = %.4f", x, sum);
 }
 
 int main(){
@@ -18,15 +26,19 @@ printf("enter a : \n"); //first term
 scanf("%d", &a);
 printf("enter b : \n"); //second term
 scanf("%d", &b);
-d=b-a;
+d=b-a; //difference bw first and second term 
 printf("d = %d \n", d);
-printf("PRESS 1 FOR nthterm, 2 to exit : \n");
+printf("Press 1 for Nth term, 2 for Sum of first  terms, 3 to exit program : \n");
 scanf(" %c", &ans);
-if (ans=='2'){
+if (ans=='3'){
     printf("EXITING PROGRAM! \n");
 }
 else if(ans=='1'){
     nthterm(n);
 }
+else if(ans=='2'){
+    sumofxterms(x);
+}
+else printf("**************INVALID INPUT************** \n");
 return 0;
 }
