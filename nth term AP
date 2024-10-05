@@ -1,0 +1,32 @@
+//AP
+#include <stdio.h>
+int a; //first term
+int b; //second term
+int d; //difference
+int n; //nth term
+int ntht; //term output
+void nthterm(int n){
+printf("enter n : \n"); //the count of term user wants to output
+scanf("%d", &n);
+ntht=(a+(n-1)*d);
+printf("nth term : %d \n", ntht);
+}
+
+int main(){
+    char ans;
+printf("enter a : \n"); //first term
+scanf("%d", &a);
+printf("enter b : \n"); //second term
+scanf("%d", &b);
+d=b-a;
+printf("d = %d \n", d);
+printf("PRESS 1 FOR nthterm, 2 to exit : \n");
+scanf(" %c", &ans);
+if (ans=='2'){
+    printf("EXITING PROGRAM! \n");
+}
+else if(ans=='1'){
+    nthterm(n);
+}
+return 0;
+}
