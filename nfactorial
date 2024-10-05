@@ -1,0 +1,15 @@
+
+//n factorial
+#include <stdio.h>
+int main(){
+    int n;
+    int temp;
+    printf("enter n: \n");
+    scanf("%d", &n);
+    temp=n;
+    for (int i=n-1;i>=1;i--){
+        temp=n*i;
+        n=temp;
+    }
+    printf("%d",temp);
+}
