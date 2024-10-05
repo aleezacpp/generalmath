@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(){
+    //prime or not
+    int n;
+    int div;
+    int x=0;
+    int i=1;
+    printf("enter n: \n");
+    scanf("%d",&n);
+    if (n==0){
+        printf("neither prime nor consonant \n");
+    }
+    else {
+       for (int i=1;i<=n;i++){
+        if (n%i==0){
+            x=x+1; //divisor count
+        }
+    }  
+     if (x>2){
+                printf("non-prime \n");
+            }
+            else printf("prime \n");
+return 0;
+}
+}
