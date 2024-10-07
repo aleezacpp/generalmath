@@ -1,0 +1,54 @@
+/*Write a program to check whether a given number is a multiple digit number or not.
+1. Example: 123 is a multiple digit number.
+2. 6 is not a multiple digit number.
+• Using the above program integrate the number if it is a prime or composite number.*/
+#include <stdio.h>
+int main(){
+    int x=0;
+    int i;
+    int n; //user input
+    int div; //divisor 
+    // int x; //divisor count
+    printf("enter n: \n");
+    scanf("%d",&n);
+    if (n==0){
+        printf("single \n neither prime nor non-prime");
+    }
+    else if (n/10==0){
+        printf("single \n");
+        for (i=1;i<=n;i++){
+            div=n%i;
+            if (div==0){
+                x=x+1;
+            }
+        }
+        if (x>2){
+            printf("non-prime \n");
+        }
+        else if (x==2){
+            printf("prime \n");
+        }
+        else if (x<2){
+            printf("please enter a valid value \n");
+        }
+    }
+    else if(n/10!=0){
+        printf("multiple \n");
+        for (i=1;i<=n;i++){
+            div=n%i;
+            if (div==0){
+                x=x+1;
+            }
+        }
+        if (x>2){
+            printf("non-prime \n");
+        }
+        else if (x==2){
+            printf("prime \n");
+        }
+        else if (x<2){
+            printf("please enter a valid value \n");
+        }
+    }
+    return 0;
+}
