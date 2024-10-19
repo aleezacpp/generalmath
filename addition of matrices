@@ -1,0 +1,55 @@
+
+#include <stdio.h>
+int main(){
+int r2; //row2
+int c2; //column2
+int r; //rows
+int c; //columns
+printf("enter r : \n");
+scanf("%d",&r);
+printf("enter c : \n");
+scanf("%d",&c);
+int arr1[r][c]; //declaring first array
+printf("enter array 1 : \n");
+for (int i=0;i<r;i++){
+    for (int j=0;j<c;j++){
+        scanf("%d",&arr1[i][j]);
+    }
+}
+printf("enter r2 : \n");
+scanf("%d",&r2);
+printf("enter c2 : \n");
+scanf("%d",&c2);
+
+if (r==r2 && c==c2){ //started if loop
+printf("enter array 2 : \n");
+
+int arr2[r2][c2]; //declaring array 2 
+for (int i=0;i<r;i++){
+    for (int j=0;j<c;j++){
+        scanf("%d",&arr2[i][j]);
+    }
+}
+
+// data for both matrices collected
+//now to add the two matrices 
+int res[r2][c2];
+
+for (int i=0;i<r;i++){
+    for (int j=0;j<c;j++){
+        res[i][j]= arr1[i][j]+arr2[i][j];
+    }
+}
+printf("GOOD BYE LIAM PAYNE... \n");
+for (int i=0;i<r;i++){
+    for (int j=0;j<c;j++){
+        printf("%d ", res[i][j]);
+    }
+    printf("\n");
+}
+}
+else {
+    printf("ADDITION NOT POSSIBLE \n");
+}
+return 0;
+}
