@@ -1,0 +1,17 @@
+#include <stdio.h>
+int func(int b,int p){
+    if (p==0) return 1; //when pwr=0, ans=1
+    else {
+        return b*func(b,p-1);
+    }
+}
+int main(){
+    int p; //pwr
+    int b; //base
+    printf("b : \n");
+    scanf("%d",&b);
+    printf("p : \n");
+    scanf("%d",&p);
+    int ans=func(b,p);
+    printf("%d",ans);
+}
