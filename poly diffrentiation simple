@@ -1,0 +1,25 @@
+//diffrentiation polynomials
+#include <stdio.h>
+
+int main(){
+    int mp; //max pwr
+    int c,i,ni; //c is final coeff, ni is new i after deduction
+    int poly[100]; //array for coefficient poly[power] is 7^2 as in 7x^2
+    printf("enter mp : \n");
+    scanf("%d",&mp);
+    for (int i=mp;i>0;i--){
+        printf("__x^%d : ",i);
+        scanf("%d",&poly[i]); //cofs detected per x
+    }
+    for (int i=mp;i>0;i--){
+        c=poly[i]*i; 
+        //cx^ni
+        ni=i-1;
+        printf("%dx^%d ",c,ni);
+        if (i>1){
+            printf("+");
+        }
+    }
+
+
+}
